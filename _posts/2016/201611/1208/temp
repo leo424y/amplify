@@ -1,0 +1,36 @@
+Additional test cases for async sequence
+5 months ago
+Fix typo in the README of `binary-search` exercise
+11 months ago
+Fix typo on the curry test.js file
+a year ago
+Change comparison type on first test
+2 years ago
+renamed flatten-promise to flatten-thunk
+2 years ago
+added stepping stone test for flatten
+2 years ago
+fixed weird undefined leaf deepEqual check
+a year ago
+make test-all work for jasmine-async
+2 years ago
+fixed some issues in new map code
+2 years ago
+'npm test' fix for memoize
+2 years ago
+better merkle readme
+a year ago
+Merge branch 'master' of github.com:kolodny/exercises
+2 years ago
+Fix typos on a couple of READMEs and package.json
+10 months ago
+test that once returns the correct value
+2 years ago
+updated readme
+2 years ago
+tightened up tests for throttle-promises
+2 years ago
+2 years ago
+added update challange
+a year ago
+Fix typos on a couple of READMEs and package.json
