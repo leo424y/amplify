@@ -44,6 +44,7 @@ def chunker(f_in, out_pref)
           # $tags = fh_in.readline.chomp! tags: #{$tags}
           File.rename("#{out_pref}#{filename}.md", "#{out_pref}#{$title}#{filename}.md")
 					random_emoji
+
           head = <<HEAD
 ---
 layout: post
@@ -51,11 +52,7 @@ comments: true
 title: #{$title}
 ---
 
-#{$people_random_emoji}
-騎單車上下班累計： #{$bike_countdown}
-岑翔結婚倒數： #{$wedding_countdown}
-新年倒數： #{$newyear_countdown}
-大旅行倒數： #{$go17_countdown}
+#{$people_random_emoji} 單： #{$bike_countdown} 婚： #{$wedding_countdown} 年： #{$newyear_countdown} 旅： #{$go17_countdown}
 
 HEAD
           fh_out << head
