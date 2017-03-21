@@ -7,6 +7,11 @@
 # 將此檔另存後執行 $ ruby spliter.rb 即將同資料夾內的 "-2016-11-05-.md" 切出下面格式檔案
 
 require 'date'
+require 'faker'
+
+def random_emoji
+	$people_random_emoji = Faker::SlackEmoji.unique.people
+end
 
 # date calculate
 def date_now_calculater(enddate)
@@ -17,14 +22,16 @@ def date_calculater
 	wedding_date = Date.new(2019, 4, 24)
 	newyear_date = Date.new(2018, 2, 15)
 	go17_date = Date.new(2017, 10, 4)
+	bike_date = Date.new(2017, 3, 20)
 	$wedding_countdown = date_now_calculater(wedding_date)
 	$newyear_countdown = date_now_calculater(newyear_date)
 	$go17_countdown = date_now_calculater(go17_date)
+	$bike_countdown = date_now_calculater(bike_date)
 end
 
 def chunker(f_in, out_pref)
   # 切檔記號
-  splitter = ';;'
+  splitter = ';'
 
   File.open(f_in, 'r') do |fh_in|
     $title = ''
@@ -34,17 +41,18 @@ def chunker(f_in, out_pref)
       unless File.exist?("#{out_pref}#{$title}#{filename}.md")
         File.open("#{out_pref}#{filename}.md", 'w+') do |fh_out|
           $title = fh_in.readline.chomp!
-          $tags = fh_in.readline.chomp!
+          # $tags = fh_in.readline.chomp! tags: #{$tags}
           File.rename("#{out_pref}#{filename}.md", "#{out_pref}#{$title}#{filename}.md")
-
+					random_emoji
           head = <<HEAD
 ---
 layout: post
 comments: true
 title: #{$title}
-tags: #{$tags}
 ---
 
+#{$people_random_emoji}
+騎單車上下班累計： #{$bike_countdown}
 岑翔結婚倒數： #{$wedding_countdown}
 新年倒數： #{$newyear_countdown}
 大旅行倒數： #{$go17_countdown}
