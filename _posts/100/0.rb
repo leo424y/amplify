@@ -79,7 +79,7 @@ end
 today = Time.now.to_s.split(' ')[0]
 # timenow = Time.now.to_s.split(' ')[1]
 date_calculater
-chunker 'y.md', "#{today}-"
+chunker '0.md', "#{today}-"
 
 # TODO: 簡化 !!
 # HACK 讀取第一行到標題 完成 只是要refacotring!@! 太醜了
