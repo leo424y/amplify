@@ -10,7 +10,8 @@ require 'date'
 require 'faker'
 
 def random_emoji
-	$people_random_emoji = Faker::SlackEmoji.people
+	$people_random_emoji = Faker::SlackEmoji
+	.people
 end
 
 # date calculate
