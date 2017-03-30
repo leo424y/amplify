@@ -119,9 +119,9 @@ If on windows you will need the ruby devkit available here: [rubyinstaller](http
 
 *Step 2:* Clone this repo to your computer
 
-```bash
+ <code>bash
 git clone git@github.com:ageitgey/amplify.git
-```
+ <code>
 
 *Step 3:* Run `gem install bundler; bundle install` inside the new `/amplify/` folder that was
 just created to install the required ruby dependencies.
@@ -169,15 +169,15 @@ The two you are are most likely to need are `<amp-img>` and `<amp-youtube>`:
 
 ### Images in your posts
 
-```
+ <code>
 <amp-img width="600" height="300" layout="responsive" src="/assets/images/your_picture.jpg"></amp-img>
-```
+ <code>
 
 ### Youtube Videos in your posts
 
-```
+ <code>
 <amp-youtube data-videoid="lBTCB7yLs8Y" layout="responsive" width="480" height="270"></amp-youtube>
-```
+ <code>
 
 ### Embedding other types of content
 
@@ -202,19 +202,19 @@ http://localhost:4000/#development=1
 
 You will either see a success message:
 
-```
+ <code>
 Powered by AMP ⚡ HTML – Version 1457112743399
 AMP validation successful.
-```
+ <code>
 
 Or you will see a list of errors to fix:
 
-```
+ <code>
 Powered by AMP ⚡ HTML – Version 1457112743399
 AMP validation had errors:
 The attribute 'style' may not appear in tag 'span'
 The attribute 'style' may not appear in tag 'div'
-```
+ <code>
 
 ## Enabling Google Analytics
 
