@@ -1,15 +1,9 @@
----
-layout: post
-comments: true
-title: ===== highest-voted-javascript-questions =====
----
-
 ===== highest-voted-javascript-questions =====
 https://stackoverflow.com/questions/tagged/javascript
-==== closures ====
+==== Closures ====
   * [[https://stackoverflow.com/questions/111102/how-do-javascript-closures-work]]
   * [[https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Closures]]
-==== redirect ====
+==== Redirect ====
 <code>
 // similar behavior as an HTTP redirect
 window.location.replace("http://stackoverflow.com");
@@ -17,7 +11,7 @@ window.location.replace("http://stackoverflow.com");
 // similar behavior as clicking on a link
 window.location.href = "http://stackoverflow.com";
 </code>
-==== check string ====
+==== Check string ====
 **1. indexOf** - (see bottom)
 <code>
 var string = "foo",
@@ -92,7 +86,7 @@ e == f            // true
 e === f           // true
 </code>
 
-==== deep clone an object (jqery)====
+==== Deep clone an object (jQuery)====
 
 [`.clone()`](http://api.jquery.com/clone/) method in **jQuery** only clones DOM elements. In order to clone JavaScript objects, you would do:
 
@@ -106,7 +100,7 @@ var newObject = jQuery.extend(true, {}, oldObject);
 
 More information can be found in the [jQuery documentation](http://api.jquery.com/jQuery.extend/).
 
-==== include JS in JS ====
+==== Include JS in JS ====
 with jQuery
 <code>
 $.getScript("my_lovely_script.js", function(){
@@ -169,7 +163,7 @@ for (val of a) {
 </code>
 
 
-==== get a timestamp ====
+==== Get a timestamp ====
 <code>
 new Date()
 
@@ -185,7 +179,7 @@ new Date().valueOf()
 
 </code>
 
-==== get query string values ====
+==== Get query string values ====
 <code>
 function getParameterByName(name, url) {
     if (!url) {
@@ -253,7 +247,7 @@ $("#validate").bind("click", validate);
 </code>
 
 
-==== the difference between call and apply ====
+==== The difference between call and apply ====
 See MDN's documentation on [apply](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply) and [call](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call).
 
 Pseudo syntax:
@@ -297,7 +291,7 @@ function ucFirstAllWords( str )
 }
 </code>
 
-==== replace all occurrences of a string ====
+==== Replace all occurrences of a string ====
 <code>
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
@@ -310,7 +304,7 @@ String.prototype.replaceAll = function(search, replacement) {
 };
 </code>
 
-==== append something to an array ====
+==== Append something to an array ====
 <code>
 // initialize array
 var arr = [
@@ -361,7 +355,7 @@ console.log('the property is not available...');
 
 </code>
 
-==== empty an array ====
+==== Empty an array ====
 <code>
 A = [];
 //or
@@ -376,5 +370,93 @@ A.splice(0,A.length)
 //or
 while(A.length > 0) {
     A.pop();
+}
+</code>
+
+
+==== Validate decimal ====
+<code>
+//js
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+//jQuery
+isNumeric: function( obj ) {
+    return !jQuery.isArray( obj ) && (obj - parseFloat( obj ) + 1) >= 0;
+}
+</code>
+
+
+====  Get the value of the selected radio button in jQuery ====
+<code>
+$('#myForm input').on('change', function() {
+   alert($('input[name=radioName]:checked', '#myForm').val());
+});
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<form id="myForm">
+<input type="radio" name="radioName" value="1" /> 1 <br />
+<input type="radio" name="radioName" value="2" /> 2 <br />
+<input type="radio" name="radioName" value="3" /> 3 <br />
+</form>
+</code>
+
+==== Encode URL ====
+<code>
+var myUrl = "http://example.com/index.html?param=1&anotherParam=2";
+var myOtherUrl = "http://example.com/index.html?url=" + myUrl;
+
+var myOtherUrl = "http://example.com/index.html?url=" + encodeURIComponent(myUrl);
+</code>
+
+==== Closure inside loops ====
+<code>
+//js
+var funcs = [];
+
+function createfunc(i) {
+    return function() { console.log("My value: " + i); };
+}
+
+for (var i = 0; i < 3; i++) {
+    funcs[i] = createfunc(i);
+}
+
+for (var j = 0; j < 3; j++) {
+    funcs[j]();                        // and now let's run each one to see
+}
+
+//es5 foreach
+var someArray = [ /* whatever */ ];
+// ...
+someArray.forEach(function(arrayElement) {
+  // ... code code code for this one element
+  someAsynchronousFunction(arrayElement, function() {
+    arrayElement.doSomething();
+  });
+});
+
+//es6
+for (let i = 0; i < 3; i++) {
+    funcs[i] = function() {
+        console.log("My value: " + i);
+    };
+}
+</code>
+
+==== Checking a key exists in a object ====
+<code>
+// BAD
+var obj = { key: undefined };
+obj["key"] != undefined // false, but the key exists!
+// GOOD
+"key" in obj // true, regardless of the actual value
+// GOOD
+obj.hasOwnProperty("key") // true
+</code>
+
+==== Empty string? ====
+<code>
+if (strValue){
+  // do something
 }
 </code>
