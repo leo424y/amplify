@@ -32,7 +32,7 @@ end
 
 def chunker(f_in, out_pref)
   # 切檔記號
-  splitter = ';'
+  splitter = ";"
 
   File.open(f_in, 'r') do |fh_in|
     $title = ''
@@ -57,7 +57,7 @@ title: #{$title}
 
 HEAD
           fh_out << head
-          puts '寫進head'
+          puts '❤️'
         end
       end
       # puts ">>打開#{filename}.md"
