@@ -53,7 +53,7 @@ comments: true
 title: #{$title}
 ---
 
-#{$people_random_emoji} 義大利： #{$wedding_countdown} 狗年： #{$newyear_countdown} 中旅： #{$go17_countdown}
+#{$people_random_emoji} 義大利行：#{$wedding_countdown} 天；新年：#{$newyear_countdown} 天；大假： #{$go17_countdown}天
 
 HEAD
           fh_out << head

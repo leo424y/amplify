@@ -1,5 +1,5 @@
 # Amplify for Jekyll
-
+❤️
 *A Jekyll html theme in the vague style of Medium.com built using Google AMP*
 
 Google's [Accelerated Mobile Pages Project](https://www.ampproject.org/)
