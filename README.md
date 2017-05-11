@@ -1,3 +1,5 @@
+
+
 kill -9 $(lsof -t -i:3000 );rails s
 
 # Amplify for Jekyll
