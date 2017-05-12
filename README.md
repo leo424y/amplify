@@ -1,4 +1,7 @@
-
+https://workflowy.com/
+https://wakatime.com/
+http://juzimi.com/
+http://w1a2d3s4q5e6.blogspot.tw/search/label/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97
 
 kill -9 $(lsof -t -i:3000 );rails s
 

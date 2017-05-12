@@ -1,9 +1,9 @@
 # 此檔案可以將一文字檔單檔切成 Github Page 用的 Markdown 檔案，可方便直推Github BLOG 詳 https://jekyllrb.com/
 # v1.0.170320
-# TODO 重要日子倒數
-# TODO tags 補完
-# TODO 重構，通用化，對不起它很髒XD
-# TODO 檔名不要有數字
+# 重要日子倒數
+# tags 補完
+# 重構，通用化，對不起它很髒XD
+# 檔名不要有數字
 # 將此檔另存後執行 $ ruby spliter.rb 即將同資料夾內的 "-2016-11-05-.md" 切出下面格式檔案
 
 require 'date'
@@ -82,10 +82,10 @@ today = Time.now.to_s.split(' ')[0]
 date_calculater
 chunker '0.md', "#{today}-"
 
-# TODO: 簡化 !!
-# HACK 讀取第一行到標題 完成 只是要refacotring!@! 太醜了
-# TODO: 模組化
-# TODO title進檔名
+#  簡化 !!
+# 讀取第一行到標題 完成 只是要refacotring!@! 太醜了
+#  模組化
+# title進檔名
 
 # 年月日取得
 # puts Time.now
