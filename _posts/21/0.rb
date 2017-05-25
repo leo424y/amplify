@@ -1,3 +1,4 @@
+# 自動找md檔！
 # 此檔案可以將一文字檔單檔切成 Github Page 用的 Markdown 檔案，可方便直推Github BLOG 詳 https://jekyllrb.com/
 # v1.0.170320
 # 重要日子倒數
