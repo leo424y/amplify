@@ -4,9 +4,6 @@ comments: true
 title: 用 increment 改變 model 欄位數值
 ---
 
-:relaxed: 義大利行：648 天；新年：215 天；大假： 81天
-
-
 You can use several ways to update the value:
 
 with validation:

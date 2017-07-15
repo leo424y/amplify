@@ -4,9 +4,6 @@ comments: true
 title: 自己的 current_user 自己刻
 ---
 
-:triumph: 義大利行：648 天；新年：215 天；大假： 81天
-
-
 ### Rails 5
 
 **Declare a module**
