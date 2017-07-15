@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Rails: find_by_id 只要用 find 即可啦！才怪
+title: find_by_id 只要用 find 即可啦！才怪
 ---
 
 # 有點不一樣
