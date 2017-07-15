@@ -7,7 +7,7 @@ permalink: /about/
 <amp-img width="600" height="300" layout="responsive" src="http://lorempixel.com/600/300/sports">
 </amp-img>
 
-- 七分真三分假，這樣才有趣
+- 七分真三分假
 - 二八法則
 
 # Skills
