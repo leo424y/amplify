@@ -4,9 +4,6 @@ comments: true
 title: Rails: find_by_id 只要用 find 即可啦！才怪
 ---
 
-:woman: 義大利行：648 天；新年：215 天；大假： 81天
-
-
 # 有點不一樣
 
 `Model.find()` can accept array of ids, and will return all records which matches.

@@ -11,24 +11,24 @@ require 'date'
 require 'faker'
 
 def random_emoji
-	$people_random_emoji = Faker::SlackEmoji
-	.people
+  $people_random_emoji = Faker::SlackEmoji
+  .people
 end
 
 # date calculate
 def date_now_calculater(enddate)
-	now = Date.today
-	enddate_conutdown = (enddate - now).to_i
+  now = Date.today
+  enddate_conutdown = (enddate - now).to_i
 end
 def date_calculater
-	wedding_date = Date.new(2019, 4, 24)
-	newyear_date = Date.new(2018, 2, 15)
-	go17_date = Date.new(2017, 10, 4)
-	# bike_date = Date.new(2017, 3, 20)
-	$wedding_countdown = date_now_calculater(wedding_date)
-	$newyear_countdown = date_now_calculater(newyear_date)
-	$go17_countdown = date_now_calculater(go17_date)
-	# $bike_countdown = date_now_calculater(bike_date)
+  wedding_date = Date.new(2019, 4, 24)
+  newyear_date = Date.new(2018, 2, 15)
+  go17_date = Date.new(2017, 10, 4)
+  # bike_date = Date.new(2017, 3, 20)
+  $wedding_countdown = date_now_calculater(wedding_date)
+  $newyear_countdown = date_now_calculater(newyear_date)
+  $go17_countdown = date_now_calculater(go17_date)
+  # $bike_countdown = date_now_calculater(bike_date)
 end
 
 def chunker(f_in, out_pref)
@@ -45,7 +45,7 @@ def chunker(f_in, out_pref)
           $title = fh_in.readline.chomp!
           # $tags = fh_in.readline.chomp! tags: #{$tags}
           File.rename("#{out_pref}#{filename}.md", "#{out_pref}#{$title}#{filename}.md")
-					random_emoji
+          random_emoji
 
           head = <<HEAD
 ---
@@ -54,9 +54,9 @@ comments: true
 title: #{$title}
 ---
 
+HEAD
 #{$people_random_emoji} 義大利行：#{$wedding_countdown} 天；新年：#{$newyear_countdown} 天；大假： #{$go17_countdown}天
 
-HEAD
           fh_out << head
           puts '❤️'
         end
