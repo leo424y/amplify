@@ -71,7 +71,7 @@ HEAD
           filename += 1
           # puts ">>換至#{filename}"
         else
-          fh_out << line_context
+          fh_out << line_context+"\n"
           # puts ">>寫進#{line_context}"
         end
       end
