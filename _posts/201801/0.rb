@@ -8,7 +8,7 @@
 # 將此檔另存後執行 $ ruby spliter.rb 即將同資料夾內的 "-2016-11-05-.md" 切出下面格式檔案
 
 require 'date'
-require 'faker'
+# require 'faker'
 
 def random_emoji
   $people_random_emoji = Faker::SlackEmoji
@@ -45,7 +45,7 @@ def chunker(f_in, out_pref)
           $title = fh_in.readline.chomp!
           # $tags = fh_in.readline.chomp! tags: #{$tags}
           File.rename("#{out_pref}#{filename}.md", "#{out_pref}#{$title}#{filename}.md")
-          random_emoji
+          # random_emoji
 
           head = <<HEAD
 ---
