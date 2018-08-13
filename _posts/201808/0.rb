@@ -33,7 +33,7 @@ end
 
 def chunker(f_in, out_pref)
   # 切檔記號
-  splitter = ";"
+  splitter = ":"
 
   File.open(f_in, 'r') do |fh_in|
     $title = ''
