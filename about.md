@@ -8,3 +8,5 @@ permalink: /about/
 - Cook
 - Bodybuilder
 - Musician
+- Dancer
+- Chatbot.tw
